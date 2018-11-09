@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+    php:
+        build: './'
+        volumes:
+          - ./src:/var/www/code
+
+    nginx:
+        image: nginx
+        ports:
+        - '8080:80'
+        volumes:
+        - ./src:/var/www/code
+        - ./vhost:/etc/nginx/conf.d
+
+
+    mariadb:
+        image: mariadb
+        environment:
+        - MYSQL_ROOT_PASSWORD=Mat1998%
+        - MYSQL_USER=tpPHP
+        - MYSQL_PASSWORD=tpPHP
+        - MYSQL_DATABASE=tpPHP
+
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+        - '8000:80'
+        environment:
+        - PMA_HOST=mariadb
+        - PMA_USER=tpPHP
+        - PMA_PASSWORD=tpPHP
