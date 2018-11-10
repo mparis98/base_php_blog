@@ -8,11 +8,10 @@
 
 declare(strict_types = 1);
 
+include 'header.php';
 
 
-
-if (!empty($_POST))
-{
+if (!empty($_POST)) {
     include 'db_connect.php';
 
     insertUser($_POST['login'], $_POST['password'], $_POST['confirm_password'], $dbh);
@@ -48,7 +47,6 @@ function insertUser(string $login, string $password, string $confirm_password, P
     }
 }
 
-include 'header.php'
 
 ?>
 

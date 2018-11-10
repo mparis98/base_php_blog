@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: matthieuparis
- * Date: 09/11/2018
- * Time: 20:40
- */
-
+declare(strict_types = 1);
 ?>
-
 <html>
     <head>
         <!--Import Google Icon Font-->
