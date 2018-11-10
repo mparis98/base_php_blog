@@ -9,4 +9,9 @@
 $user= "tpPHP";
 $pass= "tpPHP";
 
-$dbh = new PDO('mysql:host=mariadb;dbname=tpPHP', $user, $pass);
+try {
+    $dbh = new PDO('mysql:host=mariadb;dbname=tpPHP', $user, $pass);
+} catch (PDOException $e) {
+    print "Error !: " . $e->getMessage() . "<br/>";
+    die();
+}

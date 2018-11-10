@@ -7,6 +7,11 @@
  */
 
 session_start();
+
+
+if (empty($_SESSION)) {
+    header('Location: index.php');
+}
 include 'db_connect.php';
 include 'header.php';
 
@@ -35,8 +40,10 @@ $stmt->execute();
             <thead>
             <th>Title</th>
             <th>Content</th>
+            <th>Link</th>
             <th>Edit</th>
             <th>Delete</th>
+
 
             </thead>
             <tbody>
@@ -44,9 +51,10 @@ $stmt->execute();
             while ($row = $stmt->fetch()) {
                 $id =$row['id'];
                 echo "<tr>";
-                echo "<td>".$row['title']."</td>";
-                echo "<td>".$row['content']."</td>";
-                echo "<td><i class=\"material-icons prefix\">edit</i></td>";
+                echo "<td>".htmlentities($row['title'])."</td>";
+                echo "<td>".htmlentities($row['content'])."</td>";
+                echo "<td><a href='articleView.php?id=$id'> View article</a></td>";
+                echo "<td><a href='editArticle.php?edit=$id'><i class=\"material-icons prefix\">edit</i></a></td>";
                 echo "<td><a href='admin.php?delete=$id'><i class=\"material-icons prefix\">delete</i></a></td>";
                 echo "</tr>";
             }

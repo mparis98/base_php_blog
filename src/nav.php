@@ -4,7 +4,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <?php
             if (!empty($_SESSION)) {
-                $username = $_SESSION['username'];
+                $username = htmlentities($_SESSION['username']);
                 echo "<li><p class='margeP'>Hello $username</p></li>";
                 echo "<li><a href=\"article.php\">Create an article</a></li>";
                 echo "<li><a href=\"admin.php\">Admin</a></li>";

@@ -54,3 +54,15 @@ footer{
     margin-left: 10px !important;
     margin-bottom: 0 !important;
 }
+
+.imageArticle{
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50%;
+}
+
+.bold{
+    font-weight: bold;
+}
