@@ -52,7 +52,7 @@ if (!empty($_GET)) {
         <div class="row">
         <div class="col s3"></div>
             <div class="col s6">
-                <p><?php echo htmlentities($article['content']) ?></p>
+                <p class="pre-line"><?php echo htmlentities($article['content']) ?></p>
             </div>
             <div class="col s3"></div>
         </div>

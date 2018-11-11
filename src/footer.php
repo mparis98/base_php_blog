@@ -24,7 +24,8 @@
                         echo "<li><a class=\"grey-text text-lighten-3\" href=\"article.php\">Create an article</a></li>";
                         echo "<li><a class=\"grey-text text-lighten-3\" href=\"admin.php\">Admin</a></li>";
                     } else {
-                        echo "<li><a class=\"grey-text text-lighten-3\" href=\"index.php\">Connection</a></li>";
+                        echo "<li><a class=\"grey-text text-lighten-3\" href=\"index.php\">Home</a></li>";
+                        echo "<li><a class=\"grey-text text-lighten-3\" href=\"login.php\">Connection</a></li>";
                         echo "<li><a class=\"grey-text text-lighten-3\" href=\"registration.php\">Registration</a></li>";
                     }
                     ?>

@@ -66,7 +66,7 @@ $article = getArticle($_GET['edit'], $dbh);
                     <div class="input-field col s12">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">textsms</i>
-                            <textarea id="textarea2" class="materialize-textarea" data-length="600" required name="content" ><?php echo htmlentities($article['content'])?></textarea>
+                            <textarea id="textarea2" class="materialize-textarea" data-length="1000" required name="content" ><?php echo htmlentities($article['content'])?></textarea>
                             <label for="textarea2">Content</label>
                         </div>
                     </div>
@@ -96,3 +96,9 @@ $article = getArticle($_GET['edit'], $dbh);
 include "footer.php";
 
 ?>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('input#input_text, textarea#textarea2').characterCounter();
+    });
+</script>

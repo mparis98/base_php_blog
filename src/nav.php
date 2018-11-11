@@ -8,9 +8,10 @@
                 echo "<li><p class='margeP'>Hello $username</p></li>";
                 echo "<li><a href=\"article.php\">Create an article</a></li>";
                 echo "<li><a href=\"admin.php\">Admin</a></li>";
-                echo "<li><a href=\"index.php?logout\">Log out</a></li>";
+                echo "<li><a href=\"login.php?logout\">Log out</a></li>";
             } else {
-                echo "<li><a href=\"index.php\">Connection</a></li>";
+                echo "<li><a href=\"index.php\">Home</a></li>";
+                echo "<li><a href=\"login.php\">Connection</a></li>";
                 echo "<li><a href=\"registration.php\">Registration</a></li>";
             }
             ?>

@@ -73,7 +73,7 @@ function createArticle(string $title, string $content, PDO $dbh)
                     <div class="input-field col s12">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">textsms</i>
-                            <textarea id="textarea2" class="materialize-textarea" data-length="600" required name="content"></textarea>
+                            <textarea id="textarea2" class="materialize-textarea" data-length="1000" required name="content"></textarea>
                             <label for="textarea2">Content</label>
                         </div>
                     </div>

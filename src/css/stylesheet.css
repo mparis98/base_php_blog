@@ -63,6 +63,37 @@ footer{
     height: 50%;
 }
 
+.imageArticleIndex{
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40%;
+}
+
 .bold{
     font-weight: bold;
+}
+
+.block-ellipsis{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.3rem;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.margin-top{
+    margin-top: 10px;
+}
+
+.pre-line{
+    margin-top: -20px;
+    white-space: pre-line;
 }
