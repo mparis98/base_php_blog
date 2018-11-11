@@ -49,6 +49,21 @@ include 'header.php';
             $listing->execute();
 
             $count = 0;
+
+            if ($listing->fetch() == null) {
+                ?>
+                <div class="row">
+                    <div class="col s12">
+                    <p class="center-align"> There are no items to display
+                    </p>
+                    </div>
+                </div>
+
+    <?php
+            }
+
+
+
             while ($articles = $listing->fetch()) {
                 if ($count % 2 == 0) {
                     ?>
