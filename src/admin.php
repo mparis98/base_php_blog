@@ -21,9 +21,13 @@ if (!empty($_GET['delete'])) {
 
 function delete(int $id, PDO $dbh)
 {
-    $stmt = $dbh->prepare("DELETE FROM article WHERE id= :id");
-    $stmt->bindParam('id', $id);
-    $stmt->execute();
+    if (empty($_SESSION)) {
+        header('Location: index.php');
+    } else {
+        $stmt = $dbh->prepare("DELETE FROM article WHERE id= :id");
+        $stmt->bindParam('id', $id);
+        $stmt->execute();
+    }
 }
 
 
