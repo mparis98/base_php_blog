@@ -81,8 +81,6 @@ include 'header.php';
             </div>
                     <div class="col s1"></div>
         </div>
-git status
-
 
     <?php
                 } else {
